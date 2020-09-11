@@ -1,6 +1,6 @@
 {
   "name": "merge-ff",
-  "version": "1++++.0.0",
+  "version": "1.0.0",
   "private": true,
   "description": "A bot to merge PRs with fast-forward/update-ref",
   "author": "Jonas Michaelis <jonas.michaelis@outlook.com>",
