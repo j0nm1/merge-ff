@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "jest"
+    "test": "xo && jest"
   },
   "dependencies": {
     "probot": "^10.1.0",
@@ -29,5 +29,15 @@
   },
   "engines": {
     "node": ">= 10.13.0"
+  },
+  "xo": {
+    "rules": {
+      "camelcase": 0
+    },
+    "env": [
+      "es2020",
+      "node",
+      "jest"
+    ]
   }
 }
