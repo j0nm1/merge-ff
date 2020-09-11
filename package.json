@@ -15,7 +15,9 @@
   ],
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "xo && jest"
+    "test": "jest",
+    "lint": "xo",
+    "lint-fix": "xo --fix"
   },
   "dependencies": {
     "probot": "^10.1.0"
