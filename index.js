@@ -1,0 +1,28 @@
+const command = require('probot-commands')
+
+const comment = require('./lib/comment')
+const merge = require('./lib/merge')
+/**
+ * This is the main entrypoint to your Probot app
+ * @param {import('probot').Application} app
+ */
+module.exports = app => {
+  // Your code here
+  app.log.info('Yay, the app was loaded!')
+
+  app.on('issue_comment.created', merge)
+
+  app.on('pull_request.opened', comment)
+  
+  //app.on('issues.opened', async context => {
+  //  const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
+  //  return context.github.issues.createComment(issueComment)
+  //})
+
+
+  // For more information on building apps:
+  // https://probot.github.io/docs/
+
+  // To get your app running against GitHub, see:
+  // https://probot.github.io/docs/development/
+}
